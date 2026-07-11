@@ -1,59 +1,17 @@
-# Project0709
+# 📊 Angular Dashboard Architecture Practice
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.6.
+This is a sandbox project built to practice modern Angular component architecture, layout structuring, and content projection. The goal was to build a reusable, modular dashboard interface from scratch.
 
-## Development server
+## 💡 Key Concepts Practiced
 
-To start a local development server, run:
+* **Component Isolation:** Breaking down a complex UI into small, independent, and reusable building blocks (e.g., Header, Profile Card, Statistics Card).
+* **Modern Inputs:** Using Angular's new signal-based `input.required<string>()` to pass data safely from parent to child components.
+* **Advanced Content Projection:** Utilizing `<ng-content select="...">` to create a smart, reusable form wrapper that strictly accepts specific HTML elements (like `input` and `textarea`).
+* **CSS Grid Layout:** Structuring the dashboard using modern CSS Grid to create a responsive and clean card layout without relying on external UI libraries.
 
-```bash
-ng serve
-```
+## 🛠️ Tech Stack
+* Angular (Standalone Components, Signals)
+* HTML / CSS
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+*Note: This repository serves as a personal learning journal to build muscle memory for enterprise-level Angular architecture.*
