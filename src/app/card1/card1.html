@@ -1,10 +1,10 @@
 <form (ngSubmit)="onSubmit(username.value,description.value)" #form>
 <app-okos-mezo cimke="Felhasználónév">
-<input type="title" id="title" #username>
+<input type="title" id="title" #username #input>
 </app-okos-mezo>
 <br>
 <app-okos-mezo cimke="Rövid bemutatkozás" >
-<textarea name="description" id="description" #description></textarea>
+<textarea name="description" id="description" #description #input></textarea>
 </app-okos-mezo>
 <button type="submit">
     Elküldés

@@ -1,1 +1,17 @@
-<button type="submit">Adatok elküldése</button>
+<div>
+    <ul>
+        @for (form of forms; track form.id) 
+        {
+            <li>
+                <app-card4 />
+            </li>
+        }@empty {
+            <p>
+                No form availible!
+            </p>
+        }
+    </ul>
+</div>
+<div id="new-form">
+    <app-form (add)="onAdd($event)" />
+</div>

@@ -1,19 +1,20 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, output, viewChild, ViewChild } from '@angular/core';
 import { OkosMezo } from '../okos-mezo/okos-mezo';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-card1',
+  selector: 'app-form',
   imports: [OkosMezo, FormsModule],
   templateUrl: './card1.html',
   styleUrl: './card1.css',
 })
 export class Card1 {
-  @ViewChild("form") form?: ElementRef<HTMLFormElement>;
-  onSubmit(usernameElement: string, descriptionElement: string)
+  private form =viewChild.required<ElementRef<HTMLFormElement>>('form');
+  add = output<{title: string, text: string}>();
+  onSubmit(username: string, description: string)
   {
-    console.log(usernameElement + " " + descriptionElement);
-    this.form?.nativeElement.reset()
+    this.add.emit({title: username,text:description});
+    this.form()?.nativeElement.reset()
   }
 }
