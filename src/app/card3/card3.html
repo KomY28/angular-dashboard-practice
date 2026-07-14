@@ -3,7 +3,7 @@
         @for (form of forms; track form.id) 
         {
             <li>
-                <app-card4 />
+                <app-card4 [data]="form"/>
             </li>
         }@empty {
             <p>

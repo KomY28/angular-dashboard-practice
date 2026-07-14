@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core'
+import {FormModel} from '../card3/form.model'
 
 
 @Component({
@@ -9,4 +10,6 @@ import { Component } from '@angular/core';
   styleUrl: './card4.css',
   
 })
-export class Card4 {}
+export class Card4 {
+  data=input.required<FormModel>()
+}

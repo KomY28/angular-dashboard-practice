@@ -17,4 +17,8 @@ export class Card1 {
     this.add.emit({title: username,text:description});
     this.form()?.nativeElement.reset()
   }
+  onClear()
+  {
+    this.form().nativeElement.reset();
+  }
 }
