@@ -6,10 +6,10 @@
 <app-okos-mezo cimke="Rövid bemutatkozás" >
 <textarea name="description" id="description" #description #input></textarea>
 </app-okos-mezo>
-<button type="submit">
+<button type="submit" appSafeClear>
     Elküldés
 </button>
-<button type="button" (click)="onClear()">
+<button type="button" appSafeClear (confirm)="onClear()">
     Törlés
 </button>
 </form>
